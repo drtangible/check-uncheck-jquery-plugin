@@ -15,3 +15,9 @@ Just download and include 'jquery.check-uncheck.js' in your project. This plugin
 
 	// Uncheck all the checkboxes.
 	$(':checkbox').uncheck();
+	
+	
+	
+If you'd like to copy and past from here, have at it.
+
+
