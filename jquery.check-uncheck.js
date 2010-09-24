@@ -1,3 +1,8 @@
+/*!
+// Check/Uncheck jQuery plugin
+// Copyright Dan Gilbert, licensed GPL & MIT
+// http://github.com/drtangible/check-uncheck-jquery-plugin
+*/
 (function( $ ){
   $.fn.check = function( handler ) {
     if (handler) {
