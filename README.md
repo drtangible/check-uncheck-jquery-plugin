@@ -20,8 +20,40 @@ Just download and include 'jquery.check-uncheck.js' in your project. This plugin
 	
 If you'd like to copy and past from here, have at it.
 
-
-
 jquery.check-uncheck.js
 
-<script src="http://gist.github.com/638834.js"> </script>
+	(function( $ ){
+	  $.fn.check = function( handler ) {
+	    if (handler) {
+	      this.each(function() {
+	        $(this).change(function() {
+	          if ($(this).attr('checked')) {
+	            handler.call(this); 
+	          }
+	        });
+	      }); 
+	    } else {
+	      this.each(function() {
+	        $(this).attr('checked', true);
+	        $(this).change();
+	      });
+	    }
+	  };
+
+	  $.fn.uncheck = function( handler ) {
+	    if (handler) {
+	      this.each(function() {
+	        $(this).change(function() {
+	          if (!$(this).attr('checked')) {
+	            handler.call(this); 
+	          }
+	        });
+	      }); 
+	    } else {
+	      this.each(function() {
+	        $(this).attr('checked', false);
+	        $(this).change();
+	      });
+	    }
+	  };
+	})( jQuery );
